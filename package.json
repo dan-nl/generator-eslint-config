@@ -1,22 +1,22 @@
 {
   "name": "generator-eslint-config",
   "version": "0.1.1",
-  "description": "yeoman generator that sets up eslint with dan-nl/eslint-config-dan-nl",
+  "description": "yeoman generator that sets up eslint with dan-nl/eslint-config-dan-nl in the target project",
   "author": "dan entous",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dan-nl/generator.git"
+    "url": "git+https://github.com/dan-nl/generator-eslint-config.git"
   },
   "keywords": [
     "yeoman-generator",
     "generator"
   ],
   "bugs": {
-    "url": "https://github.com/dan-nl/generator/issues"
+    "url": "https://github.com/dan-nl/generator-eslint-config/issues"
   },
-  "homepage": "https://github.com/dan-nl/generator#readme",
+  "homepage": "https://github.com/dan-nl/generator-eslint-config#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
