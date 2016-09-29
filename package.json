@@ -1,6 +1,6 @@
 {
   "name": "generator-eslint-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "yeoman generator that sets up eslint with dan-nl/eslint-config-dan-nl in the target project",
   "author": "dan entous",
   "license": "MIT",
