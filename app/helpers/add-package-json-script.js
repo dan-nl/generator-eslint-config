@@ -12,6 +12,7 @@ var fs = require( 'fs' );
  * @returns {undefined}
  */
 function addPackageJsonScript( generator ) {
+  var extend_content;
   var new_content;
 
   if ( generator.package_json.scripts && typeof generator.package_json.scripts.eslint === 'string' ) {
@@ -28,7 +29,13 @@ function addPackageJsonScript( generator ) {
   generator.log( chalk.cyan( 'adding scripts' ) + ' to package.json for eslint-config' );
   generator.log( chalk.green( '   script' ) + ' eslint' );
 
-  new_content = extend( {}, generator.package_json, { scripts: { eslint: 'eslint .' } } );
+  extend_content = {
+    scripts: {
+      eslint: 'eslint .'
+    }
+  };
+
+  new_content = extend( {}, generator.package_json, extend_content );
   fs.writeFileSync( generator.destinationPath( 'package.json' ), JSON.stringify( new_content ) );
 }
 
