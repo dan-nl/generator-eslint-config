@@ -3,25 +3,22 @@
 'use strict';
 
 /**
- * module dependencies
- */
-var addPackageJsonScript = require( './helpers/add-package-json-script' );
-
-/**
  * @returns {undefined}
  */
 function writing() {
+  if ( !this.options.PromptAnswers.get( 'install-eslint' ) ) {
+    return;
+  }
+
   this.fs.copyTpl(
     this.templatePath( '.eslintignore' ),
-    this.destinationPath( './.eslintignore' )
+    this.destinationPath( '.eslintignore' )
   );
 
   this.fs.copyTpl(
     this.templatePath( '.eslintrc.js' ),
-    this.destinationPath( './.eslintrc.js' )
+    this.destinationPath( '.eslintrc.js' )
   );
-
-  addPackageJsonScript( this );
 }
 
 module.exports = writing;

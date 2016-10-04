@@ -11,10 +11,18 @@ var chalk = require( 'chalk' );
  * @returns {undefined}
  */
 function install() {
-  this.log( chalk.cyan( 'npm install' ) + ' for ' + this.options.namespace );
+  var PromptAnswers = this.options.PromptAnswers;
+
+  if ( !PromptAnswers.get( 'install-eslint' ) ) {
+    return;
+  }
+
+  this.log( chalk.cyan( 'install' ) );
+  this.log( chalk.green( '   package' ) + ' eslint' );
+  this.log( chalk.green( '   package' ) + ' ' + PromptAnswers.get( 'eslint-shared-config' ) );
 
   this.npmInstall(
-    [ 'eslint', 'dan-nl/eslint-config-dan-nl' ],
+    [ 'eslint', PromptAnswers.get( 'eslint-shared-config' ) ],
     { 'save-dev': true }
   );
 }
