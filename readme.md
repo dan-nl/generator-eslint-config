@@ -1,5 +1,7 @@
 # generator-eslint-config
-yeoman generator that sets up eslint with [dan-nl/eslint-config-dan-nl][eslint-config-dan-nl-url]
+yeoman generator that installs eslint with a shared config in the target project
+
+defaults to the shared config [dan-nl/eslint-config-dan-nl][eslint-config-dan-nl-url], but allows you to specify any shared config on github
 
 ## license
 [MIT License][mit-license]

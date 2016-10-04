@@ -1,7 +1,7 @@
 {
   "name": "generator-eslint-config",
   "version": "0.5.0",
-  "description": "yeoman generator that sets up eslint with dan-nl/eslint-config-dan-nl in the target project",
+  "description": "yeoman generator that installs eslint with a shared config in the target project",
   "author": "dan entous",
   "license": "MIT",
   "main": "app/index.js",
