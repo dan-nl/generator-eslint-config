@@ -8,7 +8,7 @@
 var generator_ascii_art = require( './helpers/ascii-art' );
 var displayGeneratorIntro = require( 'yeoman-helpers' ).displayGeneratorIntro;
 var generator_intro_text = require( './helpers/intro-text' );
-var getGeneratorPrompts = require( './helpers/get-generator-prompts' );
+var prompts = require( './helpers/prompts-install-eslint' );
 var promptingHelper = require( 'yeoman-prompting-helpers' ).promptingHelper;
 
 /**
@@ -26,7 +26,7 @@ function prompting() {
     }
   );
 
-  return promptingHelper( this, getGeneratorPrompts() );
+  return promptingHelper( this, prompts );
 }
 
 module.exports = prompting;
